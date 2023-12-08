@@ -95,7 +95,7 @@ Route::get('/contact', [ContactController::class, 'contact']);
 
 Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');
 
-Route::get('/tampil/{id}', [BlogController::class, 'tampil'])->name('tampil');
+Route::get('/style/{id}', [BlogController::class, 'tampil'])->name('style');
 
 Route::get('/styles/{id}', [StyleController::class, 'styles'])->name('styles');
 

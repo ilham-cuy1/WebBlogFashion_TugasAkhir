@@ -11,7 +11,6 @@
 <div class="container">
     <div class="card mx-auto mt-4 border-0" style="max-width: 60rem;">
         <div class="card-body">
-            <p>Dibuat oleh {{auth()->user()->name}}</p>
             <p>{!! $fashion->content !!}</p>
         </div>
     </div>

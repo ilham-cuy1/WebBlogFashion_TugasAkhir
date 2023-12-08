@@ -25,9 +25,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="#">
-                                <h3>ADM AlbarStyle</h3>
-                            </a>
+                            <h3>ADM AlbarStyle</h3>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -84,12 +82,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item dropdown me-1">
-                                    <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    </a>
-                                </li>
-                            </ul>
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"></ul>
                             <div class="dropdown">
                                 <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
                                     <div class="user-menu d-flex">
@@ -153,7 +146,7 @@
                                             </div>
                                         </div>
                                         <div class="table-responsive mt-3">
-                                            <table class=" table table-bordered table-light">
+                                            <table class="table table-bordered table-light">
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">NO</th>
@@ -171,11 +164,11 @@
                                                     @forelse ($posts as $index => $post)
                                                     <tr>
                                                         <td>{{ $index + $posts->firstItem() }}</td>
-                                                        <td class="text-center">
-                                                            <img src="{{ asset('/storage/posts/'.$post->image) }}" class="rounded" style="width: 150px;">
+                                                        <td class="">
+                                                            <img src="{{ asset('/storage/posts/'.$post->image) }}" class="rounded" style="width: 180px;">
                                                         </td>
                                                         <td>{{ $post->title }}</td>
-                                                        <td>{!! Str::limit($post->content, 350, '...') !!}</td>
+                                                        <td>{!! Str::limit($post->content, 170, '...') !!}</td>
                                                         <td class="text-center">
                                                             <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
                                                                 <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-dark mb-2">SHOW</a>

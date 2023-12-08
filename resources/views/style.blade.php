@@ -10,7 +10,7 @@
       <div class="card border-0">
         <a href="/styles/{{ $style->id }}" class="text-decoration-none">
           <img src="{{ asset('/storage/posts/'.$style->image) }}" class="card-img-top rounded-0" alt="image" height="270px">
-          <h5 class="card-title text-black mt-3">{{ Str::limit($style->title, 78, '...') }}</h5>
+          <h5 class="card-title text-black mt-3">{{ Str::limit($style->title, 80, '...') }}</h5>
         </a>
       </div>
     </div>

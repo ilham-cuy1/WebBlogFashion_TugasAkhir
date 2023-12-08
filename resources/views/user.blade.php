@@ -78,9 +78,9 @@
     @forelse($posts as $row)
     <div class="col-md-5 col-lg-4">
       <div class="card border-0">
-        <a href="/tampil/{{ $row->id }}" class="text-decoration-none">
+        <a href="/style/{{ $row->id }}" class="text-decoration-none">
           <img src="{{ asset('/storage/posts/'.$row->image) }}" class="card-img-top rounded-0" alt="image" height="270px">
-          <h5 class="card-title text-black mt-3">{{ Str::limit($row->title, 78, '...') }}</h5>
+          <h5 class="card-title text-black mt-3">{{ Str::limit($row->title, 80, '...') }}</h5>
         </a>
       </div>
     </div>
