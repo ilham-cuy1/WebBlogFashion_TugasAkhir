@@ -6,21 +6,21 @@
       <div class="carousel-item active" style="background-image: url(images/Perbedaan_Jaket_Kulit_Asli_dan_Palsu.png)">
         <div class="carousel-caption d-md-block">
           <h3 class="fw-bold">
-            LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
+            TREND FASHION PRIA KEKINIAN BIKIN KAMU PERCAYA DIRI
           </h3>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url(images/weird-trends-1536x896.jpg)">
         <div class="carousel-caption d-md-block">
           <h3 class="fw-bold">
-            LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
+            STYLE FASHION PRIA TERUPDATE DAN TERBARU
           </h3>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url(images/best-shirts-men.webp)">
         <div class="carousel-caption d-md-block">
           <h3 class="fw-bold">
-            LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING EL
+            STYLE FASHION PRIA MODERN, TERKECE DAN TERKEREN
           </h3>
         </div>
       </div>

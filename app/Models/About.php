@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class About extends Model
 {
@@ -20,4 +21,8 @@ class About extends Model
         'image',
         'content',
     ];
+
+    public function getUpdatedAtAttribute(){
+        return Carbon::parse($this->attributes['updated_at'])->translatedFormat('d M Y H:i');
+    }
 }

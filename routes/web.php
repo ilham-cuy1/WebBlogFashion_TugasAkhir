@@ -5,6 +5,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EditorBlogController;
 use App\Http\Controllers\EditorStyleController;
 use App\Http\Controllers\HomeController;
@@ -54,7 +55,7 @@ Route::middleware(['cekLogin'])->group(function(){
     
     Route::resource('/admin/about', AboutController::class);
     
-    Route::get('/admin', [BlogController::class, 'dashboard']);
+    Route::get('/admin', [DashboardController::class, 'index']);
 });
 
 

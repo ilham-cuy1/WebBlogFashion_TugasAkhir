@@ -41,8 +41,8 @@ class StyleController extends Controller
         //validate form
         $this->validate($request, [
             'image' => 'required|image|mimes:jpeg,jpg,png',
-            'title' => 'required|min:5',
-            'content' => 'required|min:10'
+            'title' => 'required|min:5|max:255',
+            'content' => 'required|min:10',
         ]);
 
         //upload image
@@ -72,8 +72,8 @@ class StyleController extends Controller
         //validate form
         $this->validate($request, [
             'image' => 'image|mimes:jpeg,jpg,png',
-            'title' => 'required|min:5',
-            'content' => 'required|min:10'
+            'title' => 'required|min:5|max:255',
+            'content' => 'required|min:10',
         ]);
         //get post by ID
         $styles = Style::findOrFail($id);

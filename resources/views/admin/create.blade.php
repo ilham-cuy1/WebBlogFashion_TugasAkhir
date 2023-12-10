@@ -141,7 +141,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="font-weight-bold mb-2">KONTEN</label>
-                                                <textarea class="form-control @error('content') is-invalid @enderror" id="content" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
+                                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
                                                 <!-- error message untuk content -->
                                                 @error('content')
                                                 <div class="alert alert-danger mt-2">

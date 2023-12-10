@@ -138,6 +138,7 @@
                                                         <th>SUB TITLE</th>
                                                         <th>GAMBAR</th>
                                                         <th>CONTENT</th>
+                                                        <th>UPDATED AT</th>
                                                         <th>AKSI</th>
                                                     </tr>
                                                 </thead>
@@ -150,6 +151,7 @@
                                                             <img src="{{ asset('/storage/posts/'.$about->image) }}" class="rounded" style="width: 150px;">
                                                         </td>
                                                         <td>{!! Str::limit($about->content, 200, '...') !!}</td>
+                                                        <td>{{ $about->updated_at }}</td>
                                                         <td class="text-center">
                                                             <form action="" method="POST">
                                                                 <a href="{{ route('about.show', $about->id) }}" class="btn btn-sm btn-dark mb-2">SHOW</a>
@@ -166,7 +168,6 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        {{ $abouts->links() }}
                                     </div>
                                 </div>
                             </div>

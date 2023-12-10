@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
+
 
 class Posts extends Model
 {
@@ -18,4 +20,12 @@ class Posts extends Model
         'title',
         'content',
     ];
+
+    public function getCreatedAtAttribute(){
+        return Carbon::parse($this->attributes['created_at'])->translatedFormat('d F Y');
+    }
+
+    public function getUpdatedAtAttribute(){
+        return Carbon::parse($this->attributes['updated_at'])->diffForHumans();
+    }
 }

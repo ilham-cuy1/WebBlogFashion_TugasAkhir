@@ -5,6 +5,7 @@ use App\Models\Posts;
 //return type View
 use Illuminate\View\View;
 use App\Http\Controllers\Controller;
+use App\Models\Style;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -35,11 +36,6 @@ class BlogController extends Controller
         return view('user', compact('posts'));
     }
 
-    public function dashboard(): View{
-
-        return view('admin.dashboard');
-    }
-
     public function tampil($id){
     
         $fashion = Posts::find($id);
@@ -56,8 +52,8 @@ class BlogController extends Controller
         //validate form
         $this->validate($request, [
             'image' => 'required|image|mimes:jpeg,jpg,png',
-            'title' => 'required|min:5',
-            'content' => 'required|min:10'
+            'title' => 'required|min:5|max:255',
+            'content' => 'required|min:10',
         ]);
 
         //upload image
@@ -86,8 +82,8 @@ class BlogController extends Controller
         //validate form
         $this->validate($request, [
             'image' => 'image|mimes:jpeg,jpg,png',
-            'title' => 'required|min:5',
-            'content' => 'required|min:10'
+            'title' => 'required|min:5|max:255',
+            'content' => 'required|min:10',
         ]);
         //get post by ID
         $posts = Posts::findOrFail($id);

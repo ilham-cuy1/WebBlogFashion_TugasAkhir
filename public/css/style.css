@@ -23,23 +23,23 @@
 }
 
 .slide .carousel-item{
-    min-height: 95vh;
+    min-height: 90vh;
     background-position: center;
     background-size: cover ;
     position: relative ;
     z-index: 1 ;
 
 }
-/* .slide .carousel-item:before{
+.slide .carousel-item:before{
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.123);
+    background-color: rgba(0, 0, 0, 0.215);
     z-index: -1;
-} */
+}
 .btn-outline-dark{
     border-color: #000000;
 }
