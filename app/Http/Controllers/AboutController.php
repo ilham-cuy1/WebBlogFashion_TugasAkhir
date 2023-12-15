@@ -18,8 +18,9 @@ class AboutController extends Controller
 
     public function about(): View
     {
+        $title = 'About - AlbarStyle';
         $abouts = About::all();
-        return view('about', compact('abouts'));
+        return view('about', compact('abouts'))->with('title', $title);
     }
 
     public function edit(string $id){

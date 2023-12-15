@@ -31,7 +31,7 @@ class BlogController extends Controller
 
     public function user(Request $request){
         $keyword = $request->keyword;
-        $posts = Posts::where('title', 'LIKE', '%'.$keyword.'%')->paginate();
+        $posts = Posts::where('title', 'LIKE', '%'.$keyword.'%')->latest()->get();
 
         return view('user', compact('posts'));
     }

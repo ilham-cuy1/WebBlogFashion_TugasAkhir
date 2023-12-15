@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<h1 class="text-center my-4">Contact</h1>
+<h1 class="text-center my-4">Contact Us</h1>
 <p class="text-center fs-5">Hubungi Kami Melalui Form Berikut</p>
 
 @if ($message = Session::get('terkirim'))

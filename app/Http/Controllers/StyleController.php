@@ -26,9 +26,10 @@ class StyleController extends Controller
     }
 
     public function style(): View {
-        $styles = Style::all();
+        $title = 'Style - AlbarStyle';
+        $styles = Style::latest()->get();
 
-        return view('style', compact('styles'));
+        return view('style', compact('styles'))->with('title', $title);
     }
 
     public function create(): View

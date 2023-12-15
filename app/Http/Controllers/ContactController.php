@@ -11,7 +11,8 @@ class ContactController extends Controller
 {
     public function contact()
     {
-        return view('contact');
+        $title = 'Contact - AlbarStyle';
+        return view('contact')->with('title', $title);
     }
 
     public function sendEmail(Request $request)

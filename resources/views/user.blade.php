@@ -85,11 +85,9 @@
       </div>
     </div>
     @empty
-    <div class="container">
-      <div class="card border-0 mt-3" style="width: 100%;">
-        <div class="card-body text-center">
-          <h5 class="card-title">Not Found</h5>
-        </div>
+    <div class="card border-0 mt-3" style="width: 100%;">
+      <div class="card-body text-center">
+        <h5 class="card-title">Not Found</h5>
       </div>
     </div>
     @endforelse
